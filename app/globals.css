@@ -1,0 +1,5999 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap");
+
+
+
+:root {
+
+
+
+  --bg: #f5f4f0;
+
+
+
+  --surface: #ffffff;
+
+
+
+  --text: #151515;
+
+
+
+  --muted: #686862;
+
+
+
+  --border: #d9d8d2;
+
+
+
+  --blue: #3157d5;
+
+
+
+  --blue-dark: #2443a8;
+
+
+
+  --dark: #151515;
+
+
+
+  --dark-soft: #202020;
+
+
+
+  --max-width: 1380px;
+
+
+
+}
+
+
+
+* {
+
+
+
+  box-sizing: border-box;
+
+
+
+}
+
+
+
+html {
+
+
+
+  scroll-behavior: smooth;
+
+
+
+}
+
+
+
+body {
+
+
+
+  margin: 0;
+
+
+
+  background: var(--bg);
+
+
+
+  color: var(--text);
+
+
+
+  font-family: "Inter", sans-serif;
+
+
+
+  -webkit-font-smoothing: antialiased;
+
+
+
+}
+
+
+
+a {
+
+
+
+  color: inherit;
+
+
+
+  text-decoration: none;
+
+
+
+}
+
+
+
+button,
+
+
+
+a {
+
+
+
+  -webkit-tap-highlight-color: transparent;
+
+
+
+}
+
+
+
+::selection {
+
+
+
+  background: var(--blue);
+
+
+
+  color: #fff;
+
+
+
+}
+
+
+
+/* ========================================
+
+
+
+   GLOBAL
+
+
+
+\======================================== */
+
+
+
+.section {
+
+
+
+  width: min(var(--max-width), calc(100% - 80px));
+
+
+
+  margin: 0 auto;
+
+
+
+  padding: 150px 0;
+
+
+
+}
+
+
+
+.section-heading {
+
+
+
+  display: grid;
+
+
+
+  grid-template-columns: 220px 1fr;
+
+
+
+  gap: 60px;
+
+
+
+  margin-bottom: 80px;
+
+
+
+}
+
+
+
+.section-number,
+
+
+
+.eyebrow,
+
+
+
+.availability,
+
+
+
+.project-meta,
+
+
+
+.project-stack,
+
+
+
+.process-item > span,
+
+
+
+.process-tags,
+
+
+
+.journey-content > span,
+
+
+
+.skill-group > span,
+
+
+
+.building-label,
+
+
+
+.contact-meta,
+
+
+
+.visual-header small,
+
+
+
+.visual-footer,
+
+
+
+.visual-status {
+
+
+
+  font-family: "IBM Plex Mono", monospace;
+
+
+
+  letter-spacing: 0.08em;
+
+
+
+  font-size: 11px;
+
+
+
+}
+
+
+
+.section-heading h2 {
+
+
+
+  margin: 0;
+
+
+
+  max-width: 800px;
+
+
+
+  font-family: "Manrope", sans-serif;
+
+
+
+  font-size: clamp(42px, 5vw, 76px);
+
+
+
+  line-height: 0.98;
+
+
+
+  letter-spacing: -0.055em;
+
+
+
+}
+
+
+
+.section-heading p {
+
+
+
+  max-width: 560px;
+
+
+
+  margin: 28px 0 0;
+
+
+
+  color: var(--muted);
+
+
+
+  font-size: 17px;
+
+
+
+  line-height: 1.7;
+
+
+
+}
+
+
+
+/* ========================================
+
+
+
+   NAVIGATION
+
+
+
+\======================================== */
+
+
+
+.site-nav {
+
+
+
+  position: fixed;
+
+
+
+  z-index: 1000;
+
+
+
+  top: 20px;
+
+
+
+  left: 50%;
+
+
+
+  transform: translateX(-50%);
+
+
+
+  width: min(1320px, calc(100% - 40px));
+
+
+
+  height: 58px;
+
+
+
+  display: flex;
+
+
+
+  align-items: center;
+
+
+
+  justify-content: space-between;
+
+
+
+  padding: 0 18px;
+
+
+
+  background: rgba(245, 244, 240, 0.92);
+
+
+
+  border: 1px solid rgba(21, 21, 21, 0.12);
+
+
+
+  backdrop-filter: blur(14px);
+
+
+
+  -webkit-backdrop-filter: blur(14px);
+
+
+
+}
+
+
+
+.nav-logo {
+
+
+
+  font-family: "Manrope", sans-serif;
+
+
+
+  font-weight: 800;
+
+
+
+  font-size: 16px;
+
+
+
+  letter-spacing: -0.04em;
+
+
+
+}
+
+
+
+.nav-logo span {
+
+
+
+  color: var(--blue);
+
+
+
+}
+
+
+
+.nav-links {
+
+
+
+  display: flex;
+
+
+
+  align-items: center;
+
+
+
+  gap: 30px;
+
+
+
+}
+
+
+
+.nav-links a,
+
+
+
+.nav-availability {
+
+
+
+  font-family: "IBM Plex Mono", monospace;
+
+
+
+  font-size: 10px;
+
+
+
+  letter-spacing: 0.08em;
+
+
+
+}
+
+
+
+.nav-links a {
+
+
+
+  color: var(--muted);
+
+
+
+  transition: color 180ms ease;
+
+
+
+}
+
+
+
+.nav-links a:hover {
+
+
+
+  color: var(--blue);
+
+
+
+}
+
+
+
+.nav-availability {
+
+
+
+  padding: 9px 12px;
+
+
+
+  border: 1px solid var(--text);
+
+
+
+  transition:
+
+
+
+    *background* 180ms ease,
+
+
+
+    color 180ms ease;
+
+
+
+}
+
+
+
+.nav-availability:hover {
+
+
+
+  background: var(--text);
+
+
+
+  color: #fff;
+
+
+
+}
+
+
+
+/* ========================================
+
+
+
+   HERO
+
+
+
+\======================================== */
+
+
+
+.hero {
+
+  min-height: auto;
+
+  padding-top: 140px;
+
+  padding-bottom: 45px;
+
+}
+
+
+
+.hero-inner {
+
+
+
+  width: min(var(--max-width), 100%);
+
+
+
+  margin: 0 auto;
+
+
+
+  display: grid;
+
+
+
+  grid-template-columns: 1.05fr 0.95fr;
+
+
+
+  align-items: center;
+
+
+
+  gap: 70px;
+
+
+
+}
+
+
+
+.hero-copy {
+
+
+
+  max-width: 850px;
+
+
+
+}
+
+
+
+.eyebrow {
+
+
+
+  display: inline-flex;
+
+
+
+  align-items: center;
+
+
+
+  gap: 10px;
+
+
+
+  margin-bottom: 34px;
+
+
+
+  color: var(--blue);
+
+
+
+}
+
+
+
+.eyebrow::before {
+
+
+
+  content: "";
+
+
+
+  width: 7px;
+
+
+
+  height: 7px;
+
+
+
+  background: var(--blue);
+
+
+
+}
+
+
+
+.hero h1 {
+
+
+
+  margin: 0;
+
+
+
+  max-width: 850px;
+
+
+
+  font-family: "Manrope", sans-serif;
+
+
+
+  font-size: clamp(64px, 8vw, 126px);
+
+
+
+  line-height: 0.82;
+
+
+
+  letter-spacing: -0.085em;
+
+
+
+  font-weight: 800;
+
+
+
+}
+
+
+
+.hero h1 span {
+
+
+
+  color: var(--blue);
+
+
+
+}
+
+
+
+.hero-description {
+
+
+
+  max-width: 560px;
+
+
+
+  margin: 38px 0 0;
+
+
+
+  color: var(--muted);
+
+
+
+  font-size: 18px;
+
+
+
+  line-height: 1.7;
+
+
+
+}
+
+
+
+.hero-actions {
+
+
+
+  display: flex;
+
+
+
+  gap: 12px;
+
+
+
+  margin-top: 38px;
+
+
+
+}
+
+
+
+.button {
+
+
+
+  min-height: 52px;
+
+
+
+  display: inline-flex;
+
+
+
+  align-items: center;
+
+
+
+  justify-content: center;
+
+
+
+  padding: 0 24px;
+
+
+
+  border: 1px solid var(--text);
+
+
+
+  font-family: "IBM Plex Mono", monospace;
+
+
+
+  font-size: 11px;
+
+
+
+  letter-spacing: 0.08em;
+
+
+
+  transition:
+
+
+
+    *background* 180ms ease,
+
+
+
+    color 180ms ease,
+
+
+
+    transform 180ms ease;
+
+
+
+}
+
+
+
+.button:hover {
+
+
+
+  transform: translateY(-2px);
+
+
+
+}
+
+
+
+.button-primary {
+
+
+
+  background: var(--text);
+
+
+
+  color: #fff;
+
+
+
+}
+
+
+
+.button-primary:hover {
+
+
+
+  background: var(--blue);
+
+
+
+  border-color: var(--blue);
+
+
+
+}
+
+
+
+.button-secondary:hover {
+
+
+
+  background: #fff;
+
+
+
+}
+
+
+
+.availability {
+
+
+
+  display: flex;
+
+
+
+  align-items: center;
+
+
+
+  gap: 9px;
+
+
+
+  margin-top: 42px;
+
+
+
+  color: var(--muted);
+
+
+
+}
+
+
+
+.availability-dot {
+
+
+
+  width: 7px;
+
+
+
+  height: 7px;
+
+
+
+  border-radius: 50%;
+
+
+
+  background: #2f8f55;
+
+
+
+}
+
+
+
+/* ========================================
+
+
+
+   HERO VISUAL
+
+
+
+\======================================== */
+
+
+
+.hero-visual {
+
+
+
+  position: relative;
+
+
+
+  min-height: 650px;
+
+
+
+  display: flex;
+
+
+
+  align-items: center;
+
+
+
+  justify-content: center;
+
+
+
+}
+
+
+
+.visual-back-card {
+
+
+
+  position: absolute;
+
+
+
+  width: 82%;
+
+
+
+  height: 72%;
+
+
+
+  right: 0;
+
+
+
+  top: 7%;
+
+
+
+  background: #e7e5df;
+
+
+
+  border: 1px solid var(--border);
+
+
+
+  transform: rotate(5deg);
+
+
+
+}
+
+
+
+.visual-topbar {
+
+
+
+  height: 50px;
+
+
+
+  display: flex;
+
+
+
+  align-items: center;
+
+
+
+  gap: 7px;
+
+
+
+  padding: 0 18px;
+
+
+
+  border-bottom: 1px solid var(--border);
+
+
+
+}
+
+
+
+.visual-topbar span {
+
+
+
+  width: 7px;
+
+
+
+  height: 7px;
+
+
+
+  border-radius: 50%;
+
+
+
+  background: #aaa8a0;
+
+
+
+}
+
+
+
+.visual-lines {
+
+
+
+  display: flex;
+
+
+
+  flex-direction: column;
+
+
+
+  gap: 13px;
+
+
+
+  padding: 30px;
+
+
+
+}
+
+
+
+.visual-lines span {
+
+
+
+  height: 7px;
+
+
+
+  background: #d0cec7;
+
+
+
+}
+
+
+
+.visual-lines span:nth-child(1) {
+
+
+
+  width: 70%;
+
+
+
+}
+
+
+
+.visual-lines span:nth-child(2) {
+
+
+
+  width: 48%;
+
+
+
+}
+
+
+
+.visual-lines span:nth-child(3) {
+
+
+
+  width: 62%;
+
+
+
+}
+
+
+
+.visual-lines span:nth-child(4) {
+
+
+
+  width: 35%;
+
+
+
+}
+
+
+
+.visual-main-card {
+
+
+
+  position: relative;
+
+
+
+  z-index: 2;
+
+
+
+  width: 90%;
+
+
+
+  min-height: 510px;
+
+
+
+  padding: 28px;
+
+
+
+  background: #fff;
+
+
+
+  border: 1px solid var(--text);
+
+
+
+  box-shadow: 24px 24px 0 rgba(21, 21, 21, 0.08);
+
+
+
+}
+
+
+
+.visual-header {
+
+
+
+  display: flex;
+
+
+
+  align-items: flex-start;
+
+
+
+  justify-content: space-between;
+
+
+
+  padding-bottom: 20px;
+
+
+
+  border-bottom: 1px solid var(--border);
+
+
+
+}
+
+
+
+.visual-header div:first-child {
+
+
+
+  display: flex;
+
+
+
+  flex-direction: column;
+
+
+
+  gap: 8px;
+
+
+
+}
+
+
+
+.visual-header strong {
+
+
+
+  font-family: "Manrope", sans-serif;
+
+
+
+  font-size: 18px;
+
+
+
+}
+
+
+
+.visual-status {
+
+
+
+  color: var(--blue);
+
+
+
+}
+
+
+
+.visual-content {
+
+
+
+  display: grid;
+
+
+
+  grid-template-columns: repeat(3, 1fr);
+
+
+
+  gap: 10px;
+
+
+
+  margin-top: 40px;
+
+
+
+}
+
+
+
+.visual-large-block {
+
+
+
+  min-height: 240px;
+
+
+
+  padding: 16px;
+
+
+
+  display: flex;
+
+
+
+  flex-direction: column;
+
+
+
+  justify-content: space-between;
+
+
+
+  background: #f5f4f0;
+
+
+
+  border: 1px solid var(--border);
+
+
+
+  transition: transform 180ms ease;
+
+
+
+}
+
+
+
+.visual-large-block:hover {
+
+
+
+  transform: translateY(-5px);
+
+
+
+}
+
+
+
+.visual-large-block.active {
+
+
+
+  background: var(--blue);
+
+
+
+  color: #fff;
+
+
+
+  border-color: var(--blue);
+
+
+
+}
+
+
+
+.visual-large-block strong {
+
+
+
+  font-family: "Manrope", sans-serif;
+
+
+
+  font-size: 24px;
+
+
+
+  letter-spacing: -0.04em;
+
+
+
+}
+
+
+
+.visual-large-block small {
+
+
+
+  font-family: "IBM Plex Mono", monospace;
+
+
+
+  font-size: 9px;
+
+
+
+  letter-spacing: 0.07em;
+
+
+
+}
+
+
+
+.visual-footer {
+
+
+
+  display: flex;
+
+
+
+  gap: 20px;
+
+
+
+  margin-top: 25px;
+
+
+
+  color: var(--muted);
+
+
+
+}
+
+
+
+.visual-floating-card {
+
+
+
+  position: absolute;
+
+
+
+  z-index: 3;
+
+
+
+  bottom: 7%;
+
+
+
+  left: 0;
+
+
+
+  display: flex;
+
+
+
+  align-items: center;
+
+
+
+  gap: 15px;
+
+
+
+  padding: 18px 20px;
+
+
+
+  background: var(--blue);
+
+
+
+  color: #fff;
+
+
+
+  font-family: "IBM Plex Mono", monospace;
+
+
+
+  font-size: 11px;
+
+
+
+  letter-spacing: 0.08em;
+
+
+
+  box-shadow: 12px 12px 0 rgba(21, 21, 21, 0.12);
+
+
+
+}
+
+
+
+/* ========================================
+
+
+
+   PROJECTS
+
+
+
+\======================================== */
+
+
+
+.projects {
+
+
+
+  display: flex;
+
+
+
+  flex-direction: column;
+
+
+
+  gap: 28px;
+
+
+
+}
+
+
+
+.project {
+
+
+
+  min-height: 720px;
+
+
+
+  display: grid;
+
+
+
+  grid-template-columns: 0.75fr 1.25fr;
+
+
+
+  overflow: hidden;
+
+
+
+}
+
+
+
+.project-info {
+
+
+
+  padding: 60px;
+
+
+
+  display: flex;
+
+
+
+  flex-direction: column;
+
+
+
+  align-items: flex-start;
+
+
+
+}
+
+
+
+.project-meta {
+
+
+
+  width: 100%;
+
+
+
+  display: flex;
+
+
+
+  align-items: center;
+
+
+
+  justify-content: space-between;
+
+
+
+  padding-bottom: 16px;
+
+
+
+  border-bottom: 1px solid currentColor;
+
+
+
+  opacity: 0.65;
+
+
+
+}
+
+
+
+.project h3 {
+
+
+
+  margin: 110px 0 25px;
+
+
+
+  font-family: "Manrope", sans-serif;
+
+
+
+  font-size: clamp(42px, 5vw, 72px);
+
+
+
+  line-height: 0.95;
+
+
+
+  letter-spacing: -0.065em;
+
+
+
+}
+
+
+
+.project p {
+
+
+
+  max-width: 470px;
+
+
+
+  margin: 0;
+
+
+
+  font-size: 16px;
+
+
+
+  line-height: 1.7;
+
+
+
+}
+
+
+
+.project-stack {
+
+
+
+  display: flex;
+
+
+
+  flex-wrap: wrap;
+
+
+
+  gap: 8px;
+
+
+
+  margin-top: 30px;
+
+
+
+}
+
+
+
+.project-stack span {
+
+
+
+  padding: 8px 10px;
+
+
+
+  border: 1px solid currentColor;
+
+
+
+  opacity: 0.7;
+
+
+
+}
+
+
+
+.project-link {
+
+
+
+  margin-top: auto;
+
+
+
+  padding-top: 50px;
+
+
+
+  font-family: "IBM Plex Mono", monospace;
+
+
+
+  font-size: 11px;
+
+
+
+  letter-spacing: 0.08em;
+
+
+
+  transition: transform 180ms ease;
+
+
+
+}
+
+
+
+.project-link:hover {
+
+
+
+  transform: translateX(6px);
+
+
+
+}
+
+
+
+.project-dark {
+
+
+
+  background: var(--dark);
+
+
+
+  color: #fff;
+
+
+
+}
+
+
+
+.project-light {
+
+
+
+  background: #e7e5df;
+
+
+
+}
+
+
+
+.project-blue {
+
+
+
+  background: var(--blue);
+
+
+
+  color: #fff;
+
+
+
+}
+
+
+
+.project-preview {
+
+
+
+  position: relative;
+
+
+
+  overflow: hidden;
+
+
+
+}
+
+
+
+/* ========================================
+
+
+
+   CHERISH PREVIEW
+
+
+
+\======================================== */
+
+
+
+.cherish-preview {
+
+
+
+  padding: 45px;
+
+
+
+  background: #ebe8e1;
+
+
+
+}
+
+
+
+.browser-bar {
+
+
+
+  height: 32px;
+
+
+
+  display: flex;
+
+
+
+  align-items: center;
+
+
+
+  gap: 6px;
+
+
+
+}
+
+
+
+.browser-bar span {
+
+
+
+  width: 7px;
+
+
+
+  height: 7px;
+
+
+
+  border-radius: 50%;
+
+
+
+  background: #999;
+
+
+
+}
+
+
+
+.fashion-preview {
+
+
+
+  height: calc(100% - 32px);
+
+
+
+  display: grid;
+
+
+
+  grid-template-columns: 0.8fr 1.2fr;
+
+
+
+  background: #111;
+
+
+
+  color: #fff;
+
+
+
+}
+
+
+
+.fashion-title {
+
+
+
+  padding: 55px 35px;
+
+
+
+  font-family: "Manrope", sans-serif;
+
+
+
+  font-weight: 800;
+
+
+
+  font-size: clamp(40px, 5vw, 76px);
+
+
+
+  line-height: 0.85;
+
+
+
+  letter-spacing: -0.07em;
+
+
+
+}
+
+
+
+.fashion-image {
+
+
+
+  background: linear-gradient(
+
+
+
+    135deg,
+
+
+
+    #777 0%,
+
+
+
+    #333 45%,
+
+
+
+    #111 100%
+
+
+
+  );
+
+
+
+}
+
+
+
+.fashion-info {
+
+
+
+  grid-column: 1 / -1;
+
+
+
+  display: flex;
+
+
+
+  align-items: center;
+
+
+
+  justify-content: space-between;
+
+
+
+  padding: 25px 35px;
+
+
+
+  border-top: 1px solid #333;
+
+
+
+  font-family: "IBM Plex Mono", monospace;
+
+
+
+  font-size: 10px;
+
+
+
+}
+
+
+
+/* ========================================
+
+
+
+   VARNIKA PREVIEW
+
+
+
+\======================================== */
+
+
+
+.varnika-preview {
+
+
+
+  padding: 50px;
+
+
+
+  background: #f5f4f0;
+
+
+
+}
+
+
+
+.store-header {
+
+
+
+  display: flex;
+
+
+
+  align-items: center;
+
+
+
+  justify-content: space-between;
+
+
+
+  padding-bottom: 25px;
+
+
+
+  border-bottom: 1px solid var(--border);
+
+
+
+  font-family: "IBM Plex Mono", monospace;
+
+
+
+  font-size: 10px;
+
+
+
+}
+
+
+
+.store-header div {
+
+
+
+  display: flex;
+
+
+
+  gap: 25px;
+
+
+
+}
+
+
+
+.store-content {
+
+
+
+  min-height: 500px;
+
+
+
+  display: grid;
+
+
+
+  grid-template-columns: 1fr 1fr;
+
+
+
+  align-items: center;
+
+
+
+  gap: 30px;
+
+
+
+}
+
+
+
+.store-content small {
+
+
+
+  font-family: "IBM Plex Mono", monospace;
+
+
+
+  font-size: 10px;
+
+
+
+}
+
+
+
+.store-content h4 {
+
+
+
+  margin: 20px 0;
+
+
+
+  font-family: "Manrope", sans-serif;
+
+
+
+  font-size: clamp(50px, 6vw, 90px);
+
+
+
+  line-height: 0.82;
+
+
+
+  letter-spacing: -0.075em;
+
+
+
+}
+
+
+
+.store-product {
+
+
+
+  height: 430px;
+
+
+
+  display: flex;
+
+
+
+  align-items: center;
+
+
+
+  justify-content: center;
+
+
+
+  background: #dfddd6;
+
+
+
+}
+
+
+
+.product-shape {
+
+
+
+  width: 58%;
+
+
+
+  height: 70%;
+
+
+
+  background: #bbb8af;
+
+
+
+  clip-path: polygon(
+
+
+
+    35% 0,
+
+
+
+    65% 0,
+
+
+
+    80% 18%,
+
+
+
+    100% 25%,
+
+
+
+    82% 100%,
+
+
+
+    18% 100%,
+
+
+
+    0 25%,
+
+
+
+    20% 18%
+
+
+
+  );
+
+
+
+}
+
+
+
+/* ========================================
+
+
+
+   SAHACHARI PREVIEW
+
+
+
+\======================================== */
+
+
+
+.sahachari-preview {
+
+
+
+  display: flex;
+
+
+
+  align-items: center;
+
+
+
+  justify-content: center;
+
+
+
+  background: #2948b3;
+
+
+
+}
+
+
+
+.phone {
+
+
+
+  width: 300px;
+
+
+
+  height: 590px;
+
+
+
+  padding: 10px;
+
+
+
+  border-radius: 36px;
+
+
+
+  background: #101010;
+
+
+
+  box-shadow: 20px 25px 50px rgba(0, 0, 0, 0.3);
+
+
+
+}
+
+
+
+.phone-notch {
+
+
+
+  position: absolute;
+
+
+
+  width: 100px;
+
+
+
+  height: 22px;
+
+
+
+  margin-left: 90px;
+
+
+
+  border-radius: 0 0 15px 15px;
+
+
+
+  background: #101010;
+
+
+
+}
+
+
+
+.phone-screen {
+
+
+
+  height: 100%;
+
+
+
+  padding: 60px 25px 25px;
+
+
+
+  border-radius: 28px;
+
+
+
+  background: #f5f4f0;
+
+
+
+  color: var(--text);
+
+
+
+}
+
+
+
+.phone-screen small {
+
+
+
+  font-family: "IBM Plex Mono", monospace;
+
+
+
+  font-size: 9px;
+
+
+
+}
+
+
+
+.phone-heading {
+
+
+
+  margin-top: 70px;
+
+
+
+  font-family: "Manrope", sans-serif;
+
+
+
+  font-size: 42px;
+
+
+
+  line-height: 0.85;
+
+
+
+  letter-spacing: -0.07em;
+
+
+
+  font-weight: 800;
+
+
+
+}
+
+
+
+.phone-card {
+
+
+
+  display: flex;
+
+
+
+  flex-direction: column;
+
+
+
+  gap: 10px;
+
+
+
+  margin-top: 50px;
+
+
+
+  padding: 18px;
+
+
+
+  background: #fff;
+
+
+
+  border: 1px solid var(--border);
+
+
+
+}
+
+
+
+.phone-card span {
+
+
+
+  font-family: "IBM Plex Mono", monospace;
+
+
+
+  font-size: 9px;
+
+
+
+}
+
+
+
+.phone-card strong {
+
+
+
+  font-size: 14px;
+
+
+
+}
+
+
+
+.phone-card.small {
+
+
+
+  margin-top: 10px;
+
+
+
+}
+
+
+
+/* ========================================
+
+
+
+   PROCESS
+
+
+
+\======================================== */
+
+
+
+.process-grid {
+
+
+
+  display: grid;
+
+
+
+  grid-template-columns:
+
+
+
+    1fr
+
+
+
+    50px
+
+
+
+    1fr
+
+
+
+    50px
+
+
+
+    1fr;
+
+
+
+  align-items: stretch;
+
+
+
+}
+
+
+
+.process-item {
+
+
+
+  position: relative;
+
+
+
+  min-height: 430px;
+
+
+
+  padding: 38px;
+
+
+
+  display: flex;
+
+
+
+  flex-direction: column;
+
+
+
+  border: 1px solid var(--border);
+
+
+
+  transition:
+
+
+
+    transform 250ms ease,
+
+
+
+    *background* 250ms ease;
+
+
+
+}
+
+
+
+.process-item:hover {
+
+
+
+  transform: translateY(-6px);
+
+
+
+}
+
+
+
+.process-item.active {
+
+
+
+  background: var(--blue);
+
+
+
+  color: #fff;
+
+
+
+  border-color: var(--blue);
+
+
+
+  transform: translateY(-12px);
+
+
+
+}
+
+
+
+.process-item h3 {
+
+
+
+  margin: auto 0 20px;
+
+
+
+  font-family: "Manrope", sans-serif;
+
+
+
+  font-size: 44px;
+
+
+
+  letter-spacing: -0.06em;
+
+
+
+}
+
+
+
+.process-item p {
+
+
+
+  margin: 0;
+
+
+
+  line-height: 1.65;
+
+
+
+  opacity: 0.8;
+
+
+
+}
+
+
+
+.process-arrow {
+
+
+
+  display: flex;
+
+
+
+  align-items: center;
+
+
+
+  justify-content: center;
+
+
+
+  font-size: 25px;
+
+
+
+  color: var(--muted);
+
+
+
+}
+
+
+
+.process-tags {
+
+
+
+  display: flex;
+
+
+
+  flex-wrap: wrap;
+
+
+
+  gap: 7px;
+
+
+
+  margin-top: 25px;
+
+
+
+}
+
+
+
+.process-tags span {
+
+
+
+  padding: 7px 9px;
+
+
+
+  border: 1px solid currentColor;
+
+
+
+}
+
+
+
+/* ========================================
+
+
+
+   JOURNEY
+
+
+
+\======================================== */
+
+
+
+.journey {
+
+
+
+  position: relative;
+
+
+
+}
+
+
+
+.journey-line {
+
+
+
+  position: absolute;
+
+
+
+  left: 245px;
+
+
+
+  top: 0;
+
+
+
+  bottom: 0;
+
+
+
+  width: 1px;
+
+
+
+  background: var(--border);
+
+
+
+}
+
+
+
+.journey-item {
+
+
+
+  position: relative;
+
+
+
+  display: grid;
+
+
+
+  grid-template-columns: 220px 50px 1fr;
+
+
+
+  min-height: 190px;
+
+
+
+  padding: 0 0 100px;
+
+
+
+}
+
+
+
+.journey-item:last-child {
+
+
+
+  padding-bottom: 0;
+
+
+
+}
+
+
+
+.journey-year {
+
+
+
+  font-family: "IBM Plex Mono", monospace;
+
+
+
+  font-size: 12px;
+
+
+
+  color: var(--muted);
+
+
+
+}
+
+
+
+.journey-marker {
+
+
+
+  position: relative;
+
+
+
+  z-index: 2;
+
+
+
+  width: 11px;
+
+
+
+  height: 11px;
+
+
+
+  margin-top: 2px;
+
+
+
+  border: 2px solid var(--text);
+
+
+
+  background: var(--bg);
+
+
+
+}
+
+
+
+.journey-marker.active {
+
+
+
+  border-color: var(--blue);
+
+
+
+  background: var(--blue);
+
+
+
+}
+
+
+
+.journey-content {
+
+
+
+  max-width: 650px;
+
+
+
+}
+
+
+
+.journey-content > span {
+
+
+
+  color: var(--blue);
+
+
+
+}
+
+
+
+.journey-content h3 {
+
+
+
+  margin: 14px 0 16px;
+
+
+
+  font-family: "Manrope", sans-serif;
+
+
+
+  font-size: clamp(34px, 4vw, 56px);
+
+
+
+  line-height: 0.95;
+
+
+
+  letter-spacing: -0.06em;
+
+
+
+}
+
+
+
+.journey-content p {
+
+
+
+  margin: 0;
+
+
+
+  color: var(--muted);
+
+
+
+  line-height: 1.7;
+
+
+
+}
+
+
+
+/* ========================================
+
+
+
+   SKILLS
+
+
+
+\======================================== */
+
+
+
+.skills-grid {
+
+
+
+  display: grid;
+
+
+
+  grid-template-columns: repeat(3, 1fr);
+
+
+
+  border-top: 1px solid var(--border);
+
+
+
+  border-left: 1px solid var(--border);
+
+
+
+}
+
+
+
+.skill-group {
+
+
+
+  min-height: 280px;
+
+
+
+  padding: 35px;
+
+
+
+  border-right: 1px solid var(--border);
+
+
+
+  border-bottom: 1px solid var(--border);
+
+
+
+}
+
+
+
+.skill-group > span {
+
+
+
+  color: var(--blue);
+
+
+
+}
+
+
+
+.skill-group h3 {
+
+
+
+  margin: 80px 0 15px;
+
+
+
+  font-family: "Manrope", sans-serif;
+
+
+
+  font-size: 32px;
+
+
+
+  letter-spacing: -0.045em;
+
+
+
+}
+
+
+
+.skill-group p {
+
+
+
+  margin: 0;
+
+
+
+  color: var(--muted);
+
+
+
+  line-height: 1.65;
+
+
+
+}
+
+
+
+/* ========================================
+
+
+
+   CURRENTLY BUILDING
+
+
+
+\======================================== */
+
+
+
+.building-section {
+
+
+
+  width: 100%;
+
+
+
+  padding-left: max(40px, calc((100vw - var(--max-width)) / 2));
+
+
+
+  padding-right: max(40px, calc((100vw - var(--max-width)) / 2));
+
+
+
+  background: var(--dark);
+
+
+
+  color: #fff;
+
+
+
+}
+
+
+
+.building-label {
+
+
+
+  color: #8d9ff0;
+
+
+
+}
+
+
+
+.building-content {
+
+
+
+  display: grid;
+
+
+
+  grid-template-columns: minmax(0, 1fr) 380px;
+
+
+
+  gap: 100px;
+
+
+
+  margin-top: 70px;
+
+
+
+}
+
+
+
+.building-content h2 {
+
+
+
+  max-width: 850px;
+
+
+
+  margin: 0;
+
+
+
+  font-family: "Manrope", sans-serif;
+
+
+
+  font-size: clamp(55px, 7vw, 110px);
+
+
+
+  line-height: 0.86;
+
+
+
+  letter-spacing: -0.08em;
+
+
+
+}
+
+
+
+.building-content p {
+
+
+
+  max-width: 600px;
+
+
+
+  margin: 45px 0 0;
+
+
+
+  color: #aaa;
+
+
+
+  font-size: 17px;
+
+
+
+  line-height: 1.75;
+
+
+
+}
+
+
+
+.building-tech {
+
+
+
+  display: grid;
+
+
+
+  grid-template-columns: 1fr 1fr;
+
+
+
+  align-content: start;
+
+
+
+  gap: 8px;
+
+
+
+}
+
+
+
+.building-tech span {
+
+
+
+  min-height: 80px;
+
+
+
+  display: flex;
+
+
+
+  align-items: flex-end;
+
+
+
+  padding: 14px;
+
+
+
+  border: 1px solid #3b3b3b;
+
+
+
+  font-family: "IBM Plex Mono", monospace;
+
+
+
+  font-size: 10px;
+
+
+
+  transition:
+
+
+
+    *background* 180ms ease,
+
+
+
+    border-color 180ms ease;
+
+
+
+}
+
+
+
+.building-tech span:hover {
+
+
+
+  background: #202020;
+
+
+
+  border-color: #666;
+
+
+
+}
+
+
+
+/* ========================================
+
+
+
+   CONTACT
+
+
+
+\======================================== */
+
+
+
+.contact-section {
+
+
+
+  padding: 150px 40px 60px;
+
+
+
+  background: var(--blue);
+
+
+
+  color: #fff;
+
+
+
+}
+
+
+
+.contact-inner {
+
+
+
+  width: min(var(--max-width), 100%);
+
+
+
+  margin: 0 auto;
+
+
+
+}
+
+
+
+.contact-section .section-number {
+
+
+
+  color: rgba(255, 255, 255, 0.65);
+
+
+
+}
+
+
+
+.contact-section h2 {
+
+
+
+  max-width: 1200px;
+
+
+
+  margin: 120px 0 40px;
+
+
+
+  font-family: "Manrope", sans-serif;
+
+
+
+  font-size: clamp(60px, 9vw, 140px);
+
+
+
+  line-height: 0.82;
+
+
+
+  letter-spacing: -0.08em;
+
+
+
+}
+
+
+
+.contact-section p {
+
+
+
+  max-width: 620px;
+
+
+
+  margin: 0;
+
+
+
+  font-size: 18px;
+
+
+
+  line-height: 1.7;
+
+
+
+}
+
+
+
+.contact-email {
+
+
+
+  display: inline-block;
+
+
+
+  margin-top: 50px;
+
+
+
+  padding-bottom: 8px;
+
+
+
+  border-bottom: 1px solid #fff;
+
+
+
+  font-family: "IBM Plex Mono", monospace;
+
+
+
+  font-size: 12px;
+
+
+
+  letter-spacing: 0.08em;
+
+
+
+}
+
+
+
+.contact-meta {
+
+
+
+  display: flex;
+
+
+
+  justify-content: space-between;
+
+
+
+  margin-top: 130px;
+
+
+
+  padding-top: 25px;
+
+
+
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+
+
+
+  color: rgba(255, 255, 255, 0.65);
+
+
+
+}
+
+
+
+/* ========================================
+
+
+
+   REDUCED MOTION
+
+
+
+\======================================== */
+
+
+
+@media (prefers-reduced-motion: reduce) {
+
+
+
+  html {
+
+
+
+    scroll-behavior: auto;
+
+
+
+  }
+
+
+
+  *,
+
+
+
+  *::before,
+
+
+
+  *::after {
+
+
+
+    animation-duration: 0.01ms !important;
+
+
+
+    animation-iteration-count: 1 !important;
+
+
+
+    transition-duration: 0.01ms !important;
+
+
+
+  }
+
+
+
+}
+
+
+
+/* ========================================
+
+
+
+   TABLET
+
+
+
+\======================================== */
+
+
+
+@media (max-width: 1100px) {
+
+
+
+  .hero {
+
+
+
+    padding-left: 30px;
+
+
+
+    padding-right: 30px;
+
+
+
+  }
+
+
+
+  .hero-inner {
+
+
+
+    grid-template-columns: 1fr;
+
+
+
+    gap: 50px;
+
+
+
+  }
+
+
+
+  .hero-copy {
+
+
+
+    max-width: 900px;
+
+
+
+  }
+
+
+
+  .hero h1 {
+
+
+
+    max-width: 900px;
+
+
+
+  }
+
+
+
+  .hero-visual {
+
+
+
+    min-height: 540px;
+
+
+
+    max-width: 850px;
+
+
+
+    margin: 0 auto;
+
+
+
+    width: 100%;
+
+
+
+  }
+
+
+
+  .project {
+
+
+
+    grid-template-columns: 1fr;
+
+
+
+    min-height: auto;
+
+
+
+  }
+
+
+
+  .project-info {
+
+
+
+    min-height: 540px;
+
+
+
+  }
+
+
+
+  .project-preview {
+
+
+
+    min-height: 600px;
+
+
+
+  }
+
+
+
+  .building-content {
+
+
+
+    grid-template-columns: 1fr;
+
+
+
+    gap: 60px;
+
+
+
+  }
+
+
+
+}
+
+
+
+/* ========================================
+
+
+
+   MOBILE
+
+
+
+\======================================== */
+
+
+
+@media (max-width: 760px) {
+
+
+
+  /* NAVIGATION */
+
+
+
+  .site-nav {
+
+
+
+    top: 12px;
+
+
+
+    width: calc(100% - 24px);
+
+
+
+    height: 52px;
+
+
+
+    padding: 0 13px;
+
+
+
+  }
+
+
+
+  .nav-links {
+
+
+
+    display: none;
+
+
+
+  }
+
+
+
+  .nav-logo {
+
+
+
+    font-size: 15px;
+
+
+
+  }
+
+
+
+  .nav-availability {
+
+
+
+    font-size: 9px;
+
+
+
+    padding: 8px 9px;
+
+
+
+  }
+
+
+
+  /* GLOBAL */
+
+
+
+  .section {
+
+  width: min(var(--max-width), calc(100% - 80px));
+
+  margin: 0 auto;
+
+  padding: 150px 0;
+
+} 
+
+
+
+/* Selected Products needs a tighter transition from the hero */
+
+\#work.section {
+
+  padding-top: 65px;
+
+}
+
+
+
+  .section-heading {
+
+
+
+    grid-template-columns: 1fr;
+
+
+
+    gap: 25px;
+
+
+
+    margin-bottom: 55px;
+
+
+
+  }
+
+
+
+  .section-heading h2 {
+
+
+
+    font-size: 45px;
+
+
+
+  }
+
+
+
+  .section-heading p {
+
+
+
+    font-size: 15px;
+
+
+
+  }
+
+
+
+  /* HERO */
+
+
+
+  .hero {
+
+
+
+    min-height: auto;
+
+
+
+    padding: 130px 20px 70px;
+
+
+
+  }
+
+
+
+  .hero-inner {
+
+
+
+    grid-template-columns: 1fr;
+
+
+
+    gap: 65px;
+
+
+
+  }
+
+
+
+  .hero-copy {
+
+
+
+    max-width: 100%;
+
+
+
+  }
+
+
+
+  .eyebrow {
+
+
+
+    margin-bottom: 27px;
+
+
+
+    font-size: 9px;
+
+
+
+  }
+
+
+
+  .hero h1 {
+
+
+
+    max-width: 100%;
+
+
+
+    font-size: clamp(48px, 14vw, 76px);
+
+
+
+    line-height: 0.84;
+
+
+
+    letter-spacing: -0.085em;
+
+
+
+  }
+
+
+
+  .hero-description {
+
+
+
+    max-width: 500px;
+
+
+
+    margin-top: 30px;
+
+
+
+    font-size: 15px;
+
+
+
+    line-height: 1.65;
+
+
+
+  }
+
+
+
+  .hero-actions {
+
+
+
+    flex-direction: column;
+
+
+
+    align-items: stretch;
+
+
+
+    margin-top: 30px;
+
+
+
+  }
+
+
+
+  .button {
+
+
+
+    width: 100%;
+
+
+
+  }
+
+
+
+  .availability {
+
+
+
+    margin-top: 30px;
+
+
+
+    font-size: 9px;
+
+
+
+  }
+
+
+
+  /* HERO VISUAL */
+
+
+
+  .hero-visual {
+
+
+
+    min-height: 420px;
+
+
+
+    width: 100%;
+
+
+
+  }
+
+
+
+  .visual-main-card {
+
+
+
+    width: 92%;
+
+
+
+    min-height: 370px;
+
+
+
+    padding: 18px;
+
+
+
+  }
+
+
+
+  .visual-back-card {
+
+
+
+    width: 88%;
+
+
+
+    height: 72%;
+
+
+
+  }
+
+
+
+  .visual-content {
+
+
+
+    gap: 6px;
+
+
+
+    margin-top: 22px;
+
+
+
+  }
+
+
+
+  .visual-large-block {
+
+
+
+    min-height: 160px;
+
+
+
+    padding: 10px;
+
+
+
+  }
+
+
+
+  .visual-large-block strong {
+
+
+
+    font-size: 15px;
+
+
+
+  }
+
+
+
+  .visual-footer {
+
+
+
+    gap: 9px;
+
+
+
+    font-size: 8px;
+
+
+
+  }
+
+
+
+  .visual-floating-card {
+
+
+
+    bottom: 3%;
+
+
+
+    padding: 13px;
+
+
+
+  }
+
+
+
+  /* PROJECTS */
+
+
+
+  .project {
+
+
+
+    grid-template-columns: 1fr;
+
+
+
+    min-height: auto;
+
+
+
+  }
+
+
+
+  .project-info {
+
+
+
+    min-height: 500px;
+
+
+
+    padding: 30px;
+
+
+
+  }
+
+
+
+  .project-meta {
+
+
+
+    font-size: 9px;
+
+
+
+  }
+
+
+
+  .project h3 {
+
+
+
+    margin-top: 70px;
+
+
+
+    font-size: 52px;
+
+
+
+  }
+
+
+
+  .project p {
+
+
+
+    font-size: 14px;
+
+
+
+  }
+
+
+
+  .project-preview {
+
+
+
+    min-height: 470px;
+
+
+
+  }
+
+
+
+  .cherish-preview,
+
+
+
+  .varnika-preview {
+
+
+
+    padding: 25px;
+
+
+
+  }
+
+
+
+  /* CHERISH */
+
+
+
+  .fashion-preview {
+
+
+
+    grid-template-columns: 1fr;
+
+
+
+  }
+
+
+
+  .fashion-title {
+
+
+
+    padding: 35px 25px;
+
+
+
+    font-size: 48px;
+
+
+
+  }
+
+
+
+  .fashion-image {
+
+
+
+    min-height: 240px;
+
+
+
+  }
+
+
+
+  .fashion-info {
+
+
+
+    padding: 18px 25px;
+
+
+
+  }
+
+
+
+  /* VARNIKA */
+
+
+
+  .store-content {
+
+
+
+    grid-template-columns: 1fr;
+
+
+
+    padding-top: 35px;
+
+
+
+  }
+
+
+
+  .store-content h4 {
+
+
+
+    font-size: 60px;
+
+
+
+  }
+
+
+
+  .store-product {
+
+
+
+    height: 260px;
+
+
+
+  }
+
+
+
+/* SAHACHARI */
+
+
+
+.phone {
+
+
+
+  width: 250px;
+
+
+
+  height: 480px;
+
+
+
+}
+
+
+
+.phone-screen {
+
+
+
+  padding: 60px 18px 25px;
+
+
+
+  overflow: hidden;
+
+
+
+}
+
+
+
+.phone-heading {
+
+
+
+  width: 100%;
+
+
+
+  max-width: none;
+
+
+
+  margin-top: 50px;
+
+
+
+  font-size: 30px;
+
+
+
+  line-height: 0.88;
+
+
+
+  letter-spacing: -0.075em;
+
+
+
+  white-space: normal;
+
+
+
+  word-break: normal;
+
+
+
+}
+
+
+
+.project-actions {
+
+  display: flex;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 18px;
+
+  margin-top: 24px;
+
+}
+
+
+
+.project-live-link {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+
+
+  font-family: var(--font-mono);
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.08em;
+
+
+
+  color: inherit;
+
+  text-decoration: none;
+
+
+
+  border-bottom: 1px solid currentColor;
+
+  padding-bottom: 3px;
+
+
+
+  transition:
+
+    opacity 0.2s ease,
+
+    transform 0.2s ease;
+
+}
+
+
+
+.project-live-link:hover {
+
+  opacity: 0.65;
+
+  transform: translateY(-1px);
+
+}
+
+
+
+  /* PROCESS */
+
+
+
+  .process-grid {
+
+
+
+    grid-template-columns: 1fr;
+
+
+
+  }
+
+
+
+  .process-arrow {
+
+
+
+    min-height: 50px;
+
+
+
+    transform: rotate(90deg);
+
+
+
+  }
+
+
+
+  .process-item {
+
+
+
+    min-height: 330px;
+
+
+
+    padding: 30px;
+
+
+
+  }
+
+
+
+  .process-item.active {
+
+
+
+    transform: none;
+
+
+
+  }
+
+
+
+  .process-item h3 {
+
+
+
+    font-size: 40px;
+
+
+
+  }
+
+
+
+  /* JOURNEY */
+
+
+
+  .journey-line {
+
+
+
+    left: 5px;
+
+
+
+  }
+
+
+
+  .journey-item {
+
+
+
+    grid-template-columns: 35px 1fr;
+
+
+
+    gap: 20px;
+
+
+
+    min-height: auto;
+
+
+
+    padding-bottom: 75px;
+
+
+
+  }
+
+
+
+  .journey-year {
+
+
+
+    grid-column: 2;
+
+
+
+    grid-row: 1;
+
+
+
+    margin-bottom: 12px;
+
+
+
+  }
+
+
+
+  .journey-marker {
+
+
+
+    grid-column: 1;
+
+
+
+    grid-row: 2;
+
+
+
+  }
+
+
+
+  .journey-content {
+
+
+
+    grid-column: 2;
+
+
+
+    grid-row: 2;
+
+
+
+  }
+
+
+
+  .journey-content h3 {
+
+
+
+    font-size: 35px;
+
+
+
+  }
+
+
+
+  .journey-content p {
+
+
+
+    font-size: 14px;
+
+
+
+  }
+
+
+
+  /* SKILLS */
+
+
+
+  .skills-grid {
+
+
+
+    grid-template-columns: 1fr;
+
+
+
+  }
+
+
+
+  .skill-group {
+
+
+
+    min-height: 230px;
+
+
+
+    padding: 30px;
+
+
+
+  }
+
+
+
+  .skill-group h3 {
+
+
+
+    margin-top: 55px;
+
+
+
+  }
+
+
+
+  /* BUILDING */
+
+
+
+  .building-section {
+
+
+
+    padding-left: 20px;
+
+
+
+    padding-right: 20px;
+
+
+
+  }
+
+
+
+  .building-content {
+
+
+
+    grid-template-columns: 1fr;
+
+
+
+    gap: 55px;
+
+
+
+  }
+
+
+
+  .building-content h2 {
+
+
+
+    font-size: 55px;
+
+
+
+  }
+
+
+
+  .building-content p {
+
+
+
+    font-size: 15px;
+
+
+
+  }
+
+
+
+  .building-tech {
+
+
+
+    grid-template-columns: 1fr 1fr;
+
+
+
+  }
+
+
+
+  .building-tech span {
+
+
+
+    min-height: 70px;
+
+
+
+  }
+
+
+
+  /* CONTACT */
+
+
+
+  .contact-section {
+
+
+
+    padding: 100px 20px 40px;
+
+
+
+  }
+
+
+
+  .contact-section h2 {
+
+
+
+    margin-top: 80px;
+
+
+
+    font-size: 64px;
+
+
+
+  }
+
+
+
+  .contact-section p {
+
+
+
+    font-size: 15px;
+
+
+
+  }
+
+
+
+  .contact-meta {
+
+
+
+    margin-top: 90px;
+
+
+
+    font-size: 9px;
+
+
+
+  }
+
+
+
+}
+
+
+
+/* ========================================
+
+
+
+   SMALL MOBILE
+
+
+
+\======================================== */
+
+
+
+@media (max-width: 420px) {
+
+.phone-heading {
+
+
+
+  max-width: 100%;
+
+
+
+  font-size: 28px;
+
+
+
+  line-height: 0.88;
+
+
+
+  letter-spacing: -0.075em;
+
+
+
+}
+
+
+
+  .nav-logo {
+
+
+
+    font-size: 14px;
+
+
+
+  }
+
+
+
+  .nav-availability {
+
+
+
+    font-size: 8px;
+
+
+
+  }
+
+
+
+  .hero h1 {
+
+
+
+    font-size: 45px;
+
+
+
+  }
+
+
+
+  .hero-visual {
+
+
+
+    min-height: 360px;
+
+
+
+  }
+
+
+
+  .visual-main-card {
+
+
+
+    min-height: 315px;
+
+
+
+  }
+
+
+
+  .visual-large-block {
+
+
+
+    min-height: 140px;
+
+
+
+  }
+
+
+
+  .visual-large-block strong {
+
+
+
+    font-size: 13px;
+
+
+
+  }
+
+
+
+  .visual-footer {
+
+
+
+    gap: 5px;
+
+
+
+    font-size: 7px;
+
+
+
+  }
+
+
+
+  .project-info {
+
+
+
+    min-height: 470px;
+
+
+
+    padding: 25px;
+
+
+
+  }
+
+
+
+  .project h3 {
+
+
+
+    font-size: 45px;
+
+
+
+  }
+
+
+
+  .project-preview {
+
+
+
+    min-height: 400px;
+
+
+
+  }
+
+
+
+  .fashion-title {
+
+
+
+    font-size: 42px;
+
+
+
+  }
+
+
+
+  .store-content h4 {
+
+
+
+    font-size: 52px;
+
+
+
+  }
+
+
+
+  .phone {
+
+
+
+    width: 225px;
+
+
+
+    height: 440px;
+
+
+
+  }
+
+
+
+  .contact-section h2 {
+
+
+
+    font-size: 55px;
+
+
+
+  }
+
+
+
+  .contact-meta {
+
+
+
+    flex-direction: column;
+
+
+
+    gap: 12px;
+
+
+
+  }
+
+
+
+}
+
+
+
+/* ========================================
+
+
+
+   REAL PROJECT SHOWCASE — 2026 UPDATE
+
+
+
+   These rules supersede the legacy CSS mockups above.
+
+
+
+\======================================== */
+
+
+
+.project-preview { position: relative; overflow: hidden; }
+
+
+
+.project-real-image { object-fit: cover; object-position: top center; }
+
+
+
+.project-browser { position: relative; overflow: hidden; background: #fff; border: 1px solid rgba(21,21,21,.15); box-shadow: 0 30px 70px rgba(0,0,0,.16); }
+
+
+
+.browser-toolbar { height: 44px; display:flex; align-items:center; justify-content:space-between; padding:0 16px; background:#f5f4f0; border-bottom:1px solid #d9d8d2; }
+
+
+
+.browser-dots { display:flex; gap:6px; }
+
+
+
+.browser-dots span { width:7px; height:7px; border-radius:50%; background:#aaa8a0; }
+
+
+
+.browser-domain { font-family:"IBM Plex Mono",monospace; font-size:8px; letter-spacing:.1em; color:#777; }
+
+
+
+.browser-image-wrap { position:relative; width:100%; aspect-ratio:16/9; overflow:hidden; }
+
+
+
+/* Cherish Vogue */
+
+
+
+.cherish-real-preview { min-height:720px; padding:55px; background:linear-gradient(135deg,#e8e5df 0%,#f5f4f0 100%); }
+
+
+
+.cherish-real-preview .project-browser { width:90%; margin-left:auto; transform:translateY(30px); }
+
+
+
+.project-system-label { display:grid; grid-template-columns:35px 1fr; gap:8px 12px; margin-top:38px; font-family:"IBM Plex Mono",monospace; font-size:9px; letter-spacing:.08em; opacity:.55; }
+
+
+
+.project-system-label strong { font-weight:500; }
+
+
+
+.floating-shot { position:absolute; overflow:hidden; background:#fff; border:1px solid rgba(21,21,21,.16); box-shadow:0 25px 55px rgba(0,0,0,.2); will-change:transform; }
+
+
+
+.cherish-product-shot { width:260px; height:330px; left:25px; bottom:35px; transform:rotate(-3deg); }
+
+
+
+.cherish-admin-shot { width:330px; height:205px; right:20px; bottom:25px; transform:rotate(2deg); }
+
+
+
+.floating-shot .project-real-image { object-fit:cover; object-position:top; }
+
+
+
+.shot-label { position:absolute; left:10px; bottom:10px; padding:6px 8px; background:#151515; color:#fff; font-family:"IBM Plex Mono",monospace; font-size:8px; letter-spacing:.08em; }
+
+
+
+/* Varnika Store */
+
+
+
+.varnika-real-preview { min-height:720px; padding:45px; display:grid; grid-template-columns:1.4fr .75fr; gap:18px; background:#dedbd3; }
+
+
+
+.varnika-main-shot,.varnika-small-shot { position:relative; overflow:hidden; background:#f5f4f0; border:1px solid rgba(21,21,21,.15); }
+
+
+
+.varnika-main-shot { min-height:620px; display:flex; flex-direction:column; }
+
+
+
+.visual-shot-number { flex:0 0 auto; padding:12px 14px; border-bottom:1px solid rgba(21,21,21,.12); font-family:"IBM Plex Mono",monospace; font-size:8px; letter-spacing:.09em; color:#666; }
+
+
+
+.varnika-main-image { position:relative; flex:1; min-height:0; overflow:hidden; }
+
+
+
+.varnika-main-image .project-real-image { object-fit:cover; object-position:top center; }
+
+
+
+.varnika-secondary-grid { display:grid; grid-template-rows:1fr 1fr; gap:18px; }
+
+
+
+.varnika-small-shot { min-height:0; display:flex; flex-direction:column; transition:transform 250ms ease; }
+
+
+
+.varnika-small-image { position:relative; flex:1; min-height:0; overflow:hidden; }
+
+
+
+.varnika-small-image .project-real-image { object-fit:cover; object-position:top center; }
+
+
+
+/* Sahachari */
+
+
+
+.sahachari-real-preview { min-height:720px; display:flex; align-items:flex-end; justify-content:center; padding:70px 30px 45px; background:radial-gradient(circle at 50% 40%,rgba(255,255,255,.18),transparent 38%),#2948b3; }
+
+
+
+.mobile-showcase-label { position:absolute; top:35px; left:35px; display:flex; flex-direction:column; gap:7px; color:rgba(255,255,255,.7); font-family:"IBM Plex Mono",monospace; font-size:8px; letter-spacing:.09em; }
+
+
+
+.mobile-showcase-label strong { color:#fff; font-family:"Manrope",sans-serif; font-size:18px; letter-spacing:-.03em; }
+
+
+
+.device { position:absolute; overflow:hidden; padding:7px; border:2px solid rgba(255,255,255,.35); border-radius:32px; background:#111; box-shadow:0 35px 70px rgba(0,0,0,.3); will-change:transform; }
+
+
+
+.device-main { z-index:3; width:280px; height:575px; left:50%; bottom:42px; transform:translateX(-50%); }
+
+
+
+.device-left { z-index:1; width:235px; height:490px; left:8%; bottom:48px; transform:rotate(-7deg); }
+
+
+
+.device-right { z-index:2; width:235px; height:490px; right:8%; bottom:48px; transform:rotate(7deg); }
+
+
+
+.device-screen { position:relative; width:100%; height:100%; overflow:hidden; border-radius:25px; background:#fff; }
+
+
+
+.device-image { object-fit:cover; object-position:top center; }
+
+
+
+.device-speaker { position:absolute; z-index:5; top:14px; left:50%; width:70px; height:18px; transform:translateX(-50%); border-radius:20px; background:#111; }
+
+
+
+.mobile-showcase-caption { position:absolute; right:28px; bottom:18px; display:flex; gap:18px; color:rgba(255,255,255,.65); font-family:"IBM Plex Mono",monospace; font-size:8px; letter-spacing:.09em; }
+
+
+
+@media (max-width:1100px) {
+
+
+
+  .cherish-real-preview,.varnika-real-preview,.sahachari-real-preview { min-height:650px; }
+
+
+
+  .cherish-product-shot { width:230px; height:290px; }
+
+
+
+  .cherish-admin-shot { width:290px; height:180px; }
+
+
+
+  .varnika-real-preview { grid-template-columns:1.25fr .75fr; }
+
+
+
+  .device-main { width:270px; height:555px; }
+
+
+
+  .device-left,.device-right { width:220px; height:460px; }
+
+
+
+}
+
+
+
+@media (max-width:760px) {
+
+
+
+  .project-preview { min-height:auto; }
+
+
+
+  .cherish-real-preview { min-height:620px; padding:25px 18px; }
+
+
+
+  .cherish-real-preview .project-browser { width:100%; margin:0; transform:none; }
+
+
+
+  .browser-toolbar { height:36px; }
+
+
+
+  .browser-domain { font-size:7px; }
+
+
+
+  .cherish-product-shot { width:145px; height:205px; left:15px; bottom:28px; transform:rotate(-3deg); }
+
+
+
+  .cherish-admin-shot { width:185px; height:120px; right:12px; bottom:22px; transform:rotate(2deg); }
+
+
+
+  .shot-label { font-size:6px; }
+
+
+
+  .varnika-real-preview { min-height:auto; padding:20px; display:flex; flex-direction:column; gap:12px; }
+
+
+
+  .varnika-main-shot { min-height:360px; }
+
+
+
+  .varnika-main-image { min-height:320px; }
+
+
+
+  .varnika-secondary-grid { grid-template-columns:1fr 1fr; grid-template-rows:none; gap:12px; }
+
+
+
+  .varnika-small-shot { min-height:210px; }
+
+
+
+  .varnika-small-image { min-height:170px; }
+
+
+
+  .visual-shot-number { padding:9px; font-size:7px; }
+
+
+
+  .sahachari-real-preview { min-height:570px; padding:80px 10px 30px; }
+
+
+
+  .mobile-showcase-label { top:24px; left:20px; }
+
+
+
+  .mobile-showcase-label strong { font-size:15px; }
+
+
+
+  .device-main { width:205px; height:420px; bottom:45px; }
+
+
+
+  .device-left { width:160px; height:340px; left:-15px; bottom:52px; transform:rotate(-7deg); }
+
+
+
+  .device-right { width:160px; height:340px; right:-15px; bottom:52px; transform:rotate(7deg); }
+
+
+
+  .device { padding:5px; border-radius:25px; }
+
+
+
+  .device-screen { border-radius:20px; }
+
+
+
+  .device-speaker { top:10px; width:50px; height:13px; }
+
+
+
+  .mobile-showcase-caption { right:15px; bottom:15px; gap:9px; font-size:6px; }
+
+
+
+}
+
+
+
+@media (max-width:420px) {
+
+
+
+  .cherish-real-preview { min-height:560px; }
+
+
+
+  .cherish-product-shot { width:125px; height:180px; }
+
+
+
+  .cherish-admin-shot { width:160px; height:105px; }
+
+
+
+  .varnika-main-shot { min-height:320px; }
+
+
+
+  .varnika-main-image { min-height:280px; }
+
+
+
+  .varnika-small-shot { min-height:185px; }
+
+
+
+  .varnika-small-image { min-height:145px; }
+
+
+
+  .sahachari-real-preview { min-height:520px; }
+
+
+
+  .device-main { width:185px; height:385px; }
+
+
+
+  .device-left,.device-right { width:140px; height:300px; }
+
+
+
+  .device-left { left:-25px; }
+
+
+
+  .device-right { right:-25px; }
+
+
+
+}
+
+
+
+html,
+
+
+
+body {
+
+
+
+  width: 100%;
+
+
+
+  max-width: 100%;
+
+
+
+  overflow-x: clip;
+
+
+
+}
+
+
+
+img,
+
+
+
+svg,
+
+
+
+video {
+
+
+
+  max-width: 100%;
+
+
+
+}
+
+
+
+.project,
+
+
+
+.project-info,
+
+
+
+.project-preview,
+
+
+
+.hero-inner,
+
+
+
+.building-content {
+
+
+
+  min-width: 0;
+
+
+
+} 
+
+
+
+@media (max-width: 380px) {
+
+
+
+  .hero-identity {
+
+
+
+    gap: 9px;
+
+
+
+  }
+
+
+
+  .hero-avatar {
+
+
+
+    width: 42px;
+
+
+
+    height: 42px;
+
+
+
+    flex-basis: 42px;
+
+
+
+  }
+
+
+
+  .hero-identity-role {
+
+
+
+    max-width: 130px;
+
+
+
+  }
+
+
+
+  .hero-github {
+
+
+
+    font-size: 7px;
+
+
+
+  }
+
+
+
+}
+
+
+
+/* =========================================================
+
+
+
+   HERO IDENTITY
+
+
+
+   ========================================================= */
+
+
+
+.hero-identity {
+
+
+
+  display: flex;
+
+
+
+  align-items: center;
+
+
+
+  gap: 14px;
+
+
+
+  width: fit-content;
+
+
+
+  max-width: 100%;
+
+
+
+  margin-top: 26px;
+
+
+
+  padding: 9px 12px 9px 9px;
+
+
+
+  border: 1px solid rgba(17, 17, 17, 0.14);
+
+
+
+  background: rgba(255, 255, 255, 0.35);
+
+
+
+}
+
+
+
+.hero-avatar {
+
+
+
+  position: relative;
+
+
+
+  width: 52px;
+
+
+
+  height: 52px;
+
+
+
+  flex: 0 0 52px;
+
+
+
+  overflow: hidden;
+
+
+
+  background: #e8e7e2;
+
+
+
+}
+
+
+
+.hero-avatar img {
+
+
+
+  width: 100%;
+
+
+
+  height: 100%;
+
+
+
+  object-fit: cover;
+
+
+
+  /* Focus on face rather than laptop/desk */
+
+
+
+  object-position: 50% 30%;
+
+
+
+}
+
+
+
+.hero-identity-copy {
+
+
+
+  display: flex;
+
+
+
+  flex-direction: column;
+
+
+
+  justify-content: center;
+
+
+
+  min-width: 0;
+
+
+
+}
+
+
+
+.hero-identity-name {
+
+
+
+  font-size: 11px;
+
+
+
+  font-weight: 700;
+
+
+
+  line-height: 1.2;
+
+
+
+  letter-spacing: 0.06em;
+
+
+
+}
+
+
+
+.hero-identity-role {
+
+
+
+  margin-top: 4px;
+
+
+
+  font-size: 9px;
+
+
+
+  line-height: 1.3;
+
+
+
+  color: var(--muted);
+
+
+
+}
+
+
+
+.hero-github {
+
+
+
+  margin-left: 16px;
+
+
+
+  font-size: 9px;
+
+
+
+  font-weight: 700;
+
+
+
+  letter-spacing: 0.1em;
+
+
+
+  color: var(--text);
+
+
+
+  text-decoration: none;
+
+
+
+  white-space: nowrap;
+
+
+
+  transition:
+
+
+
+    color 180ms ease,
+
+
+
+    transform 180ms ease;
+
+
+
+}
+
+
+
+.hero-github:hover {
+
+
+
+  color: var(--accent);
+
+
+
+  transform: translateX(2px);
+
+
+
+}
+
+
+
+/* ========================================
+
+   FINAL HERO LINK + MEDIA SAFETY
+
+\======================================== */
+
+.hero-text-link {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  min-height: 52px;
+
+  padding: 0 6px;
+
+  font-family: "IBM Plex Mono", monospace;
+
+  font-size: 11px;
+
+  font-weight: 500;
+
+  letter-spacing: 0.08em;
+
+  color: var(--text);
+
+  border-bottom: 1px solid transparent;
+
+  transition: color 180ms ease, border-color 180ms ease, transform 180ms ease;
+
+}
+
+.hero-text-link:hover {
+
+  color: var(--blue);
+
+  border-color: var(--blue);
+
+  transform: translateX(3px);
+
+}
+
+img { max-width: 100%; }
+
+@media (max-width: 760px) {
+
+  .hero-actions { align-items: center; flex-wrap: wrap; }
+
+  .hero-text-link { min-height: 44px; font-size: 10px; }
+
+}
